@@ -538,7 +538,7 @@ if __name__ == '__main__':
     y = int(dw.height()*0.8)
     widget.resize(x, y)
 
-    widget.setWindowTitle("Annotation selection")
+    widget.setWindowTitle("AnnApp")
     widget.setWindowIcon(QtGui.QIcon('logo.ico'))
     widget.addWidget(window)
     widget.setWindowFlag(QtCore.Qt.WindowCloseButtonHint, False)
