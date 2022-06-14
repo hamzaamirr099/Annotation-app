@@ -18,6 +18,8 @@
 QMainWindow{
 	
 	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(7, 31, 83, 255));
+	
+	background-color: rgb(40, 40, 40);
 }
 
 QWidget
@@ -117,7 +119,11 @@ QLineEdit
 QPushButton
 {
 	color: rgb(0, 0, 0);
+	
+	color: rgb(255, 255, 255);
 	background-color: rgb(241, 228, 44);
+	
+	background-color: rgb(61, 61, 61);
     border-width: 1px;
     border-color: #1e1e1e;
     border-style: solid;
@@ -125,15 +131,11 @@ QPushButton
    
 }
 
-QPushButton:disabled
-{
-    
-	background-color: rgb(241, 228, 44);
-}
 
 QPushButton:pressed
 {
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #b09313, stop: 0.5 #b09313, stop: 0.9 #b09313, stop: 1 #252525);
+    
+	background-color: rgb(0, 0, 0);
 }
 
 QComboBox
@@ -434,7 +436,7 @@ QAbstractSpinBox {
            <font>
             <pointsize>10</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -449,7 +451,7 @@ QAbstractSpinBox {
            <font>
             <pointsize>10</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -488,7 +490,8 @@ QAbstractSpinBox {
       <item>
        <widget class="Line" name="line">
         <property name="styleSheet">
-         <string notr="true">background-color:  rgb(241, 228, 44);</string>
+         <string notr="true">background-color:  rgb(241, 228, 44);
+background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -518,7 +521,7 @@ QAbstractSpinBox {
            <font>
             <pointsize>10</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -547,6 +550,10 @@ QAbstractSpinBox {
             <bold>false</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+          </property>
          </widget>
         </item>
         <item row="1" column="2">
@@ -561,7 +568,7 @@ QAbstractSpinBox {
            <font>
             <pointsize>10</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -585,7 +592,7 @@ QAbstractSpinBox {
            <font>
             <pointsize>12</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -624,6 +631,10 @@ QAbstractSpinBox {
             <bold>false</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+          </property>
          </widget>
         </item>
         <item row="1" column="1">
@@ -638,7 +649,7 @@ QAbstractSpinBox {
            <font>
             <pointsize>10</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -662,7 +673,7 @@ QAbstractSpinBox {
            <font>
             <pointsize>12</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -699,7 +710,7 @@ QAbstractSpinBox {
            <font>
             <pointsize>12</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -723,7 +734,7 @@ QAbstractSpinBox {
            <font>
             <pointsize>10</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -751,6 +762,10 @@ QAbstractSpinBox {
             <italic>false</italic>
             <bold>false</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
           </property>
          </widget>
         </item>
@@ -818,7 +833,7 @@ QAbstractSpinBox {
              <font>
               <pointsize>10</pointsize>
               <weight>75</weight>
-              <italic>true</italic>
+              <italic>false</italic>
               <bold>true</bold>
              </font>
             </property>
@@ -878,13 +893,12 @@ QAbstractSpinBox {
              <font>
               <pointsize>10</pointsize>
               <weight>75</weight>
-              <italic>true</italic>
+              <italic>false</italic>
               <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Back</string>
@@ -935,7 +949,7 @@ color: rgb(0, 0, 0);</string>
            <font>
             <pointsize>15</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>

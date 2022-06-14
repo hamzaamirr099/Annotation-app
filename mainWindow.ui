@@ -25,6 +25,9 @@
 QMainWindow{
 	
 	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(7, 31, 83, 255));
+	
+	
+	background-color: rgb(40, 40, 40);
 }
 
 QWidget
@@ -43,12 +46,15 @@ QTreeView, QListView
 QWidget:item:hover
 {
     background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d4c555 stop: 1 #e3c800);
+	background-color: rgb(167, 167, 167);
     color: #000000;
 }
 
 QWidget:item:selected
 {
     background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d4c555, stop: 1 #e3c800);
+	
+	background-color: rgb(167, 167, 167);
 }
 
 QMenuBar::item
@@ -124,7 +130,12 @@ QLineEdit
 QPushButton
 {
 	color: rgb(0, 0, 0);
+	
+	color: rgb(255, 255, 255);
 	background-color: rgb(241, 228, 44);
+	
+	background-color: rgb(61, 61, 61);
+	
     border-width: 1px;
     border-color: #1e1e1e;
     border-style: solid;
@@ -132,15 +143,12 @@ QPushButton
    
 }
 
-QPushButton:disabled
-{
-    
-	background-color: rgb(241, 228, 44);
-}
+
 
 QPushButton:pressed
 {
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #b09313, stop: 0.5 #b09313, stop: 0.9 #b09313, stop: 1 #252525);
+	
+	background-color: rgb(0, 0, 0);
 }
 
 QComboBox
@@ -276,7 +284,7 @@ QTabBar::tab:!selected
     color: #b1b1b1;
     border-bottom-style: solid;
     margin-top: 3px;
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:.4 #343434);
+    /*background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:.4 #343434);*/
 }
 
 QTabBar::tab:selected
@@ -292,7 +300,7 @@ QTabBar::tab:!selected:hover
     padding-bottom: 3px;*/
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:0.4 #343434, stop:0.2 #343434, stop:0.1 #ffaa00);
+    /*background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:0.4 #343434, stop:0.2 #343434, stop:0.1 #ffaa00);*/
 }
 
 QScrollBar:vertical
@@ -422,7 +430,7 @@ QAbstractSpinBox {
             <family>MS Shell Dlg 2</family>
             <pointsize>9</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
             <underline>false</underline>
            </font>
@@ -448,7 +456,7 @@ QAbstractSpinBox {
             <family>MS Shell Dlg 2</family>
             <pointsize>9</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -486,7 +494,7 @@ color: rgb(0, 0, 0);</string>
            <font>
             <pointsize>12</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -511,8 +519,7 @@ color: rgb(0, 0, 0);</string>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);
-</string>
+color: rgb(0, 0, 0);</string>
           </property>
          </widget>
         </item>
@@ -538,7 +545,7 @@ color: rgb(0, 0, 0);
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(90, 90, 90);
+color: rgb(0, 0, 0);
 font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
           </property>
           <property name="text">
@@ -558,7 +565,8 @@ font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">/*background-color: rgb(85, 85, 85);*/
-background-color: rgb(241, 228, 44);</string>
+background-color: rgb(241, 228, 44);
+background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -594,7 +602,8 @@ background-color: rgb(241, 228, 44);</string>
         </property>
         <property name="styleSheet">
          <string notr="true">/*background-color: rgb(85, 85, 85);*/
-background-color: rgb(241, 228, 44);</string>
+background-color: rgb(241, 228, 44);
+background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -618,7 +627,7 @@ background-color: rgb(241, 228, 44);</string>
            <font>
             <pointsize>14</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -714,8 +723,8 @@ background-color: rgb(241, 228, 44);</string>
              </sizepolicy>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);</string>
+             <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
             </property>
            </widget>
           </item>
@@ -812,7 +821,7 @@ background-color: rgb(255, 255, 255);</string>
            <font>
             <pointsize>9</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -836,7 +845,7 @@ background-color: rgb(255, 255, 255);</string>
            <font>
             <pointsize>11</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -858,7 +867,7 @@ background-color: rgb(255, 255, 255);</string>
             <family>MS Shell Dlg 2</family>
             <pointsize>11</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
             <underline>false</underline>
             <strikeout>false</strikeout>
@@ -882,7 +891,7 @@ background-color: rgb(255, 255, 255);</string>
            <font>
             <pointsize>13</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -915,6 +924,7 @@ background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0.512438, y1:0, x2:0.517, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(27, 27, 27, 255));
+background-color: rgb(0, 0, 0);
 </string>
         </property>
         <property name="iconSize">
@@ -942,7 +952,7 @@ background-color: rgb(255, 255, 255);</string>
            <font>
             <pointsize>15</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -963,7 +973,7 @@ background-color: rgb(255, 255, 255);</string>
            <font>
             <pointsize>15</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
@@ -985,7 +995,8 @@ background-color: rgb(255, 255, 255);</string>
        </sizepolicy>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 0);</string>
+       <string notr="true">background-color: rgb(255, 255, 0);
+background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -1014,12 +1025,13 @@ background-color: rgb(255, 255, 255);</string>
            <font>
             <pointsize>9</pointsize>
             <weight>75</weight>
-            <italic>true</italic>
+            <italic>false</italic>
             <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(241, 228, 44);</string>
+           <string notr="true">color: rgb(241, 228, 44);
+color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
            <string>Shiftmap</string>
@@ -1111,7 +1123,8 @@ background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="styleSheet">
          <string notr="true">/*background-color: rgb(85, 85, 85);*/
-background-color: rgb(241, 228, 44);</string>
+background-color: rgb(241, 228, 44);
+background-color: rgb(255, 255, 255);</string>
         </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -1124,12 +1137,13 @@ background-color: rgb(241, 228, 44);</string>
          <font>
           <pointsize>9</pointsize>
           <weight>75</weight>
-          <italic>true</italic>
+          <italic>false</italic>
           <bold>true</bold>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color: rgb(241, 228, 44);</string>
+         <string notr="true">color: rgb(241, 228, 44);
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Navier</string>

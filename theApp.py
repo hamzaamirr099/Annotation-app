@@ -230,7 +230,7 @@ class MainApp(QMainWindow):
                     qtImage = ImageQt.ImageQt(mask_img) # convert Image to ImageQt
                     qMask = QtGui.QPixmap.fromImage(qtImage)
                     icon = QtGui.QIcon(qMask)
-                    item = QtWidgets.QListWidgetItem(icon, f"{annIndex}")
+                    item = QtWidgets.QListWidgetItem(icon, f"{ann['id']}")
                     self.listWidget.addItem(item)
                     annIndex += 1
 
@@ -258,7 +258,7 @@ class MainApp(QMainWindow):
             self.showmessagebox("Invalid command", "Please select a mask.")
             
         else:
-            originalMask = self.theMasks[int(self.listWidget.currentItem().text())]
+            originalMask = self.theMasks[self.listWidget.currentRow()]
             originalImage = cv2.imread(self.imagesFolderPath + "/" + self.imageName.text())
             if self.checkBox.isChecked():
                 t1 = threading.Thread(target = self.shiftMapInpaint, args = (originalImage, originalMask))
@@ -317,8 +317,8 @@ class MainApp(QMainWindow):
         else:
 
             if self.listWidget.currentItem():
-                maskIndex = int(self.listWidget.currentItem().text())            
-                self.data[self.imageName.text()] = maskIndex    
+                annotationID = int(self.listWidget.currentItem().text())            
+                self.data[self.imageName.text()] = annotationID    
                 print(self.data)            
                 self.nextPic()
             else:
@@ -330,7 +330,7 @@ class MainApp(QMainWindow):
         r = random.randint(0, 255)
         g = random.randint(0, 255)
         b = random.randint(0, 255)
-        mask = self.theMasks[int(self.listWidget.currentItem().text())]
+        mask = self.theMasks[self.listWidget.currentRow()]
         image = cv2.imread(self.imagesFolderPath + "/" + self.imageName.text())
 
         # Create colored mask
@@ -456,10 +456,10 @@ class screen2(QMainWindow):
                 if self.imagesExtension in image: # Check for the right extension to avoid json files with different image extensions
                     if os.path.isfile(self.lineEdit.text() + "/" + image): # To check first if the image is found in this folder or not
                         originalImage = cv2.imread(self.lineEdit.text() + "/" + image) # lineEdit --> images directory 
-                        image_id = int(image.removesuffix(self.imagesExtension).lstrip('0')) 
-                        annotationIDs = self.coco.getAnnIds(image_id)
-                        annotations = self.coco.loadAnns(annotationIDs)
-                        mask = self.coco.annToMask(annotations[self.data[image]])
+                        ann = self.coco.loadAnns(self.data[image]) 
+                        #type of ann is (list), which has only one item, because we specified the annotation id
+                        
+                        mask = self.coco.annToMask(ann[0])
 
                         # Saving name of the image, the image itself, and its mask to loop over them in inpainting methods
                         allImages.append(originalImage)
