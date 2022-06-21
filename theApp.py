@@ -141,13 +141,13 @@ class MainApp(QMainWindow):
     # Get the annotations file path
     def browseAnns(self):
 
-        fname = QFileDialog.getOpenFileName(self, "Select the annotations file", "D:/FCIH/GraduationProject/Dataset", "(*.json)")
+        fname = QFileDialog.getOpenFileName(self, "Select the annotations file", "../", "(*.json)")
         self.lineEdit1.setText(fname[0])
     
     # Get the images folder path
     def browseImages(self):
 
-        folderDirectory = QFileDialog.getExistingDirectory(self, "Select the images folder", "D:/FCIH/GraduationProject/Dataset")
+        folderDirectory = QFileDialog.getExistingDirectory(self, "Select the images folder", "../")
         self.lineEdit2.setText(folderDirectory)
 
 
@@ -304,7 +304,7 @@ class MainApp(QMainWindow):
         
         # First save
         if len(self.jsonFilePath) == 0: 
-            fname = QFileDialog.getOpenFileName(self, "Select json file for saving data", "D:/FCIH/GraduationProject/Dataset", "(*.json)")
+            fname = QFileDialog.getOpenFileName(self, "Select json file for saving data", "../", "(*.json)")
             self.jsonFilePath = fname[0]
 
             # if this json file has data
@@ -411,19 +411,19 @@ class screen2(QMainWindow):
 
     def selectJson(self):
 
-        fileDirectory = QFileDialog.getOpenFileName(self, "Select the json file", "D:/FCIH/GraduationProject/Dataset", "(*.json)")
+        fileDirectory = QFileDialog.getOpenFileName(self, "Select the json file", "../", "(*.json)")
         self.lineEdit1.setText(fileDirectory[0])
 
     # Selecting the destination folder that will hold the shiftmap data
     def shiftDestination(self): 
 
-        folderDirectory = QFileDialog.getExistingDirectory(self, "Select the desitnation folder", "D:/FCIH/GraduationProject/Dataset")
+        folderDirectory = QFileDialog.getExistingDirectory(self, "Select the desitnation folder", "../")
         self.lineEdit2.setText(folderDirectory)
 
     # Selecting the destination folder that will hold the navier data
     def navierDestination(self): 
 
-        folderDirectory = QFileDialog.getExistingDirectory(self, "Select the desitnation folder", "D:/FCIH/GraduationProject/Dataset")
+        folderDirectory = QFileDialog.getExistingDirectory(self, "Select the desitnation folder", "../")
         self.lineEdit3.setText(folderDirectory)
 
     def start(self):
