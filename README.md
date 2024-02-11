@@ -9,3 +9,6 @@ The output:
 Dependencies:
 1) git clone https://github.com/pdollar/coco.git
 2) pip install pyqt5-tools
+
+Video and more details are on this Google drive link: https://drive.google.com/drive/folders/1ENFL3VQUHacnS80MucXmg0yfVmvs5tiV?usp=sharing
+
